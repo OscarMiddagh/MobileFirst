@@ -89,7 +89,7 @@ header img {
     font-weight: bold;
     text-decoration: none;
     color: var(--black);
-
+    scroll-behavior: smooth;
 }
 .header--title-container .header--button span {
     display: inline-block;
