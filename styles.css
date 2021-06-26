@@ -1,0 +1,488 @@
+/*
+Asi se recomienda agregar los estilos
+    1.-Posicionamiento (position, flex)
+    2.-Box Model (Margin, pading, tamaños)
+    3.-Tipografia
+    4.-Temas Visuales (shadow, border radius)
+    5.-Otros
+*/
+:root{
+    /*
+    Delcaracion de Variables
+        1.-Colores
+        2.-
+    */
+    --bitcoin-orange : #F7931A;
+    --soft-orange:#FFE9D5;
+    --secondary-blue:#1A9AF7;
+    --soft-blue:#E7F5FF;
+    --warm-black:#201E1C;
+    --warm-black-1:#282623;
+    --black: #282623;
+    --grey:#BABABA;
+    --off-white:#FAF8F7;
+    --just-white:#FFFFFF;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* min-width: 320px; */
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img {
+    width: 151px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+.header--title-container{
+    width: 90%;
+    min-width: 288px;   
+    max-width: 900px;
+    height: 218px;
+    margin-top: 50px;
+    text-align: center;
+    align-self: center;
+}
+.header--title-container h1{
+    font-size: 2.4rem;  
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.header--title-container p{
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header--title-container .header--button{
+    position: absolute;
+    left: calc(50% - 118px);
+    top: 270px;
+    margin-top: 35px;
+    display: block;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    /*sombras*/
+    background-color: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+
+}
+.header--title-container .header--button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/down-arrow.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main{
+    width: 100%;
+    /* min-width: 320px; */
+    height: auto;
+    background-color: var(--off-white);
+}
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.main-exchange-container--title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.main-exchange-container .backgroundImg{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('./assets/img/bitcoin.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-exchange-container h2{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--warm-black);
+}
+.main-exchange-container  p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+.main-currency-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;    
+    scroll-snap-align: center;
+}
+.main-currency-table .currency-table--title{
+    
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+}
+.main-currency-table .monedas{
+    color: #FF9536;
+}
+.main-currency-table .comisiones {
+    color:var(--secondary-blue);
+}
+.currency-table--container{
+    width: 90%;
+    min-width:230px;
+    max-width: 284px;
+    height: 250px;
+    margin: 0 auto;
+}
+.currency-table--container table{
+    width: 100%;
+    height: 100%;
+}
+.currency-table--container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+    padding-left: 12px;
+    text-align: left;
+}
+.currency-table--container .table__right {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: normal;
+    color: #757575;    
+    text-align: center;
+}
+.currency-table--container .table__top-left{
+    border-radius: 10px 0 0 0;
+}
+.currency-table--container .table__top-right{
+    border-radius: 0 10px 0 0;
+}
+.currency-table--container .table__bottom-left{
+    border-radius: 0 0 0 10px;
+}
+.currency-table--container .table__bottom-right{
+    border-radius: 0 0 10px 0;
+}
+.currency-table--container span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;    
+    background-size: cover;
+    margin-left:10px ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.currency-table--container .down{
+    background-image: url('./assets/icons/trending-down-1.svg');
+}
+.currency-table--container .up{
+    background-image: url('./assets/icons/trending-up-1.svg');
+}
+.currency-table--date{
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 8px;
+}
+.currency-table--date p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+.currency-table--date-monedas{
+    background-color: var(--soft-orange);
+}
+.currency-table--date-comisiones{
+    background-color: var(--soft-blue);
+}
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 16px;
+    background-color: var(--warm-black);
+}
+.patata-icon{
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background-image: url('./assets/icons/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -11px;
+    left: calc(50% - 20px);/*Se quita la dimension del width*/
+    margin: 0 auto;    
+}
+.product-detail--card{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 16px 18px;
+    background-color: var(--warm-black-1);
+    border-radius: 4px;
+    margin-bottom: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    max-width: 400px;
+}
+.product-cards--container span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+    
+}
+.product-cards--container .clock{
+    background-image: url('./assets/icons/clock-1.svg');
+}
+.product-cards--container .eye{
+    background-image: url('./assets/icons/eye-1.svg');
+}
+.product-cards--container .dollar{
+    background-image: url('./assets/icons/dollar-sign-1.svg');
+}
+.product-cards--container .check{
+    background-image: url('./assets/icons/check-circle-1.svg');
+}
+.product-cards--container .product--card-title{
+    font-size: 1.8rem;    
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    margin-bottom: 10px;
+}   
+.product-cards--container .produc--card-body{    
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
+}
+.product-detail--title{
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.product-detail--title h2{
+    color: var(--just-white);
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.product-detail--title p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
+    margin-bottom: 30px;
+}
+.main-image-background {
+    width: 100%;
+    height: 50vh;
+    background-image: url('./assets/img/bitcoinbaby1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.main-image-background h2{
+    padding-top: 64px;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--just-white);
+}
+.main-plans-container{
+    width: 100%;
+    padding-bottom: 70px;
+    padding-top: 65px;
+    text-align: center;
+}
+.plans--title{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+.plans--title h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    font-style: normal;
+    color:var(--warm-black);
+    margin-bottom: 24px;
+}
+.plans--title p{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #757575;
+    margin-bottom: 50px;
+}
+.plans-container--card{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    height: auto;
+    max-width: 300px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+    margin: 0 5px;
+    padding: 16px;
+    padding-bottom: 20px;
+}
+.recomended{
+    position: absolute;
+    padding: 8px;
+    width: 120px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    align-self: center;
+    margin-top: -30px ;
+    left: calc(50% - 60px);
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:var(--just-white);
+}
+.plan-card--title{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 8px;
+}
+.plan-card--price{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+}
+.plan-card--price span{
+    position: absolute;
+    top: 66px;
+    left: calc(50% - 45px);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.plan-card--saving{
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #757575;
+    margin-bottom: 20px;
+}
+.plan-card-ca {
+    width: 150px;
+    height: 50px;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FAF8F7;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    border: 2px solid #F7931A;
+    color: var(--black);
+    border-radius: 4px;
+}
+.plan-card-ca span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/arrow-right-plans.svg');
+    vertical-align: text-bottom;
+}
+.plans-container--sliders {
+    padding: 20px;
+    display: flex;
+    overflow-x: overlay;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:x proximity;
+    
+}
+.main-tables-container{
+    padding: 20px;
+    display: flex;
+    overflow-x: overlay;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:x proximity;
+}
+footer {
+    display: flex;
+    background-color: var(--bitcoin-orange);
+    width: 100%;
+    height: 150px;
+
+}
+footer section{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left li {
+    margin: 10px 0;
+
+}
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
+}
